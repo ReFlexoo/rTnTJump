@@ -1,12 +1,12 @@
 # rTnTJump criado e desenvolvido por ReFlexoo.
 # Version:
-# 1.0
+# 1.2
 
 #Em caso de problemas acesse: https://discord.gg/eehY3dH5XU ou https://discord.gg/47j272usWF
 
 options:
 
-	Upwards: 2.0
+	Upwards: 3.0
 	Forwards: 3.0
 	Region: 5
 
@@ -16,3 +16,7 @@ on explosion:
 	loop all entities in radius {@Region} of event-location:
 		push the loop-entity upwards at speed {@Upwards}
 		push the loop-entity forwards at speed {@Forwards}
+on right click with fire charge:
+	cancel event
+	remove fire charge from player
+	shoot a fireball from player at speed 1
